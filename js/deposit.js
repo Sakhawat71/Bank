@@ -4,6 +4,11 @@ const deposit =()=>{
     const newDepositValueString = depositInput.value;
     const newDepositValue = parseFloat(newDepositValueString);
 
+    if (isNaN(newDepositValue)) {
+        alert("try to use Number")
+        return;
+    }
+
     //  get deposit value from deposit box
     const depositBox = document.getElementById("deposit-box");
     const previusDepositMoneyString = depositBox.innerText;
